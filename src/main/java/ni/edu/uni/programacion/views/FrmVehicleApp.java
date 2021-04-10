@@ -82,7 +82,7 @@ public class FrmVehicleApp extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(416, 339));
+        setSize(new java.awt.Dimension(831, 547));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -98,7 +98,8 @@ public class FrmVehicleApp extends javax.swing.JFrame {
 
     private void mniNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniNewActionPerformed
         // TODO add your handling code here:
-        PnlDialogNew dialogn = new PnlDialogNew(this, true);
+        PnlDialogNew dialogn = new PnlDialogNew(null, true);
+         
         dialogn.setVisible(true);
         
     }//GEN-LAST:event_mniNewActionPerformed

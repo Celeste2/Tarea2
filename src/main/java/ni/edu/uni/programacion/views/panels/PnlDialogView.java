@@ -28,7 +28,6 @@ public class PnlDialogView extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("View List");
-        setPreferredSize(new java.awt.Dimension(404, 330));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.BorderLayout());
@@ -42,6 +41,11 @@ public class PnlDialogView extends javax.swing.JDialog {
         jButton1.setMinimumSize(new java.awt.Dimension(30, 23));
         jButton1.setPreferredSize(new java.awt.Dimension(85, 23));
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton1);
 
         jButton2.setText("Actualizar");
@@ -51,6 +55,11 @@ public class PnlDialogView extends javax.swing.JDialog {
         jButton2.setMinimumSize(new java.awt.Dimension(30, 23));
         jButton2.setPreferredSize(new java.awt.Dimension(85, 23));
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton2);
 
         jButton3.setText("Eliminar");
@@ -60,6 +69,11 @@ public class PnlDialogView extends javax.swing.JDialog {
         jButton3.setMinimumSize(new java.awt.Dimension(30, 23));
         jButton3.setPreferredSize(new java.awt.Dimension(85, 23));
         jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel4.add(jButton3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -80,6 +94,18 @@ public class PnlDialogView extends javax.swing.JDialog {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

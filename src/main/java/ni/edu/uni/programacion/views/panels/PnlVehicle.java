@@ -13,13 +13,15 @@ import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
-
+import ni.edu.uni.programacion.backend.dao.VehiculoObservable;
+import ni.edu.uni.programacion.backend.dao.VehiculoObservador;
+import java.util.logging.Logger;
 /**
  *
  * @author Sistemas-05
  */
 public class PnlVehicle extends javax.swing.JPanel {
-
+private static final Logger logger = Logger.getLogger(PnlVehicle.class.getName());
     /**
      * Creates new form PnlVehicle
      */
@@ -154,6 +156,11 @@ public class PnlVehicle extends javax.swing.JPanel {
         btnSave.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnSave.setForeground(new java.awt.Color(0, 153, 102));
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnSave);
 
         btnCancel.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -177,6 +184,16 @@ public class PnlVehicle extends javax.swing.JPanel {
         txtStock.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txtStockFocusLost(evt);
+            }
+        });
+        txtStock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStockActionPerformed(evt);
+            }
+        });
+        txtStock.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                txtStockPropertyChange(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -455,6 +472,30 @@ public class PnlVehicle extends javax.swing.JPanel {
         
         txtStock.setBorder(null);
     }//GEN-LAST:event_txtStockFocusLost
+
+    private void txtStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStockActionPerformed
+        // TODO add your handling code here:
+        
+        //se utilizan las clases Vehiculo Observador
+       // y vehiculo observable
+       
+    }//GEN-LAST:event_txtStockActionPerformed
+
+    private void txtStockPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtStockPropertyChange
+        // TODO add your handling code here:
+    
+    }//GEN-LAST:event_txtStockPropertyChange
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        logger.info("Voy a implementar el observer a continuacion");
+             VehiculoObservable vo = new VehiculoObservable(1, 100, 200);
+             vo.setValor(1);
+        VehiculoObservador to = new VehiculoObservador();
+        
+        vo.addObserver(to);
+        logger.info("Acabo de agregar el observador");
+    }//GEN-LAST:event_btnSaveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

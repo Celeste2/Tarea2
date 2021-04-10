@@ -58,22 +58,25 @@ public class PnlDialogNew extends javax.swing.JDialog {
         setTitle("New Vehicle");
 
         pnlContent.setMinimumSize(new java.awt.Dimension(30, 20));
+        pnlContent.setPreferredSize(new java.awt.Dimension(50, 100));
         pnlContent.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
         );
 
         pnlContent.getAccessibleContext().setAccessibleParent(pnlContent);
 
-        setSize(new java.awt.Dimension(416, 339));
+        setSize(new java.awt.Dimension(406, 557));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
